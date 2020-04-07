@@ -1,0 +1,45 @@
+
+body {
+    background-color:#476A6F;
+}
+
+h1 {
+    text-align: center;
+    background-color: #519E8A;
+    font-size: 75px;
+}
+
+ul {
+    column-count: 2;
+    column-gap: 10px;
+}
+
+li {
+   list-style-type: none;
+   display: table-column 4;
+   max-height: 500px;
+   max-width: 400px;
+   padding: 20px;
+   background-color: #C5C9A4;
+   border-radius: 20px;
+   text-align: center;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   overflow: scroll;
+   margin-top: 20px;
+}
+
+li h3 {
+   text-decoration: underline;
+}
+
+li img {
+   width: 200px;
+   height: 300px;
+   float: left;
+   margin: 10px;
+   
+}
+
+li #summary {
+   text-align: left;
+}
