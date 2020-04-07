@@ -1,4 +1,4 @@
-import bookStock from './books.js';
-import { renderBook } from './renderBooks.js';
+import bookStock from './data/books.js';
+import { renderBook } from './functions/renderBooks.js';
 
 renderBook(bookStock);

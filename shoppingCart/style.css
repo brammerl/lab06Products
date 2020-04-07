@@ -1,0 +1,20 @@
+table {
+    width: 80%;
+}
+
+thead th {
+    background-color:  #519E8A;
+    border-bottom: 2px solid black;
+    padding: 7px 10px 10px 10px
+}
+
+#totalLabel, #totalPrice {
+   padding: 10px;
+   background-color:  #C5C9A4;
+}
+
+tbody tr td{
+    padding: 10px;
+    border-bottom: 2px solid black;
+    background-color:  #C5C9A4;
+}

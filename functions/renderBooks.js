@@ -15,6 +15,7 @@ export function renderBook(array) {
         uList.append(list);
         list.append(image, bookTitle, summaryText, button, priceText);
 
+
         image.src = currentBook.img;
         bookTitle.textContent = currentBook.title;
         summaryText.textContent = currentBook.summary;
@@ -22,6 +23,5 @@ export function renderBook(array) {
         button.value = currentBook.id;
         button.textContent = 'Add to Cart';
         priceText.textContent = currentBook.price;
-
     }
 }
