@@ -40,6 +40,8 @@ test('time to test a function', function(assert) {
             button.value = currentBook.id;
             button.textContent = 'Add to Cart';
             priceText.textContent = currentBook.price;
+
+            return list;
         }
     }
 
