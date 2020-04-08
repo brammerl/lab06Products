@@ -1,15 +1,22 @@
 import bookStock from '../data/books.js';
 import orderOne from '../data/cart.js';
-import { renderDom }from './renderDom.js';
+import { renderDom } from './renderDom.js';
+import { findById, calcOrderTotal } from '../common/utils.js';
 
-import { findById } from '../common/utils.js';
+const table = document.getElementById('body');
 
-const tbody = document.getElementById('body');
+for (let i = 0; i < orderOne.length; i++){
+    const order = orderOne[i];
 
-const saturn = findById(orderOne, 'Saturn');
+    const product = findById(bookStock, order.id);
 
-const saturnStock = findById(bookStock, 'Saturn');
+    const dom = renderDom(order, product);
 
-const newItem = renderDom(saturn, saturnStock);
+    table.append(dom);
+}
 
-tbody.appendChild(newItem);
+const orderTotal = calcOrderTotal(orderOne, bookStock);
+const totalTab = document.getElementById('total');
+
+totalTab.textContent = `$ ${orderTotal}`;
+

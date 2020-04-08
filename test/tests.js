@@ -1,7 +1,5 @@
 const test = QUnit.test;
 
-
-
 test('testing creating a dom in the product page', function(assert) {
 
 //I had to take out certain aspects of the renderBooks.js that call upon the index html of the main page

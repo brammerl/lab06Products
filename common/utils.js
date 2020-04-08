@@ -15,3 +15,19 @@ export function calcLineFunction(quantity, price) {
     Math.round(amount * 100) / 100;
     return amount;
 }
+
+export function calcOrderTotal(cartArr, productArr) {
+    
+    let orderTot = 0;
+
+    for (let i = 0; i < cartArr.length; i++) {
+
+        const items = cartArr[i];
+        const productPrice = findById(productArr, items.id);
+        const orderTotal = calcLineFunction(items.quantity, productPrice.price);
+
+        orderTot += orderTotal;
+    }
+    return orderTot;
+
+}

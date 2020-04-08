@@ -17,7 +17,8 @@ export function renderDom(cartItem, corrProduct) {
     tableDataItem.textContent = cartItem.id;
     tableDataQuant.textContent = cartItem.quantity;
     tableDataPrice.textContent = makePriceReadable(corrProduct.price);
-    tableDataSubTotal.textContent = calcLineFunction(cartItem.quantity, corrProduct.price);  
+    const price = calcLineFunction(cartItem.quantity, corrProduct.price);  
+    tableDataSubTotal.textContent = `$ ${price}`;
     
     tr.append(tableDataItem, tableDataQuant, tableDataPrice, tableDataSubTotal);
     return tr;
