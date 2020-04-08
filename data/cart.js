@@ -1,11 +1,11 @@
 const orderOne = [{
-    tem: 'Saturn',
+    id: 'Saturn',
     quantity: 2
 }, {
-    item: 'Love and Misadventure',
+    id: 'Love and Misadventure',
     quantity: 1
 }, {
-    item: 'All About Love',
+    id: 'All About Love',
     quantity: 3,
 }];
 
