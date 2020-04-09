@@ -1,0 +1,22 @@
+
+body {
+    background-color:#476A6F;
+}
+
+h1 {
+    text-align: center;
+    background-color: #519E8A;
+    font-size: 75px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+nav {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: rgb(238, 190, 197);
+    font-size: 30px;
+    color: black;
+    border-radius: 10px;
+}
