@@ -1,11 +1,12 @@
 import { calcLineFunction } from '../common/utils.js';
 
 export function makePriceReadable(number) {
+    // put your toFixed HERE
     const price = `$${number}`;
     return price;
 }
 
-export function renderDom(cartItem, corrProduct) {
+export function renderCartLine(cartItem, corrProduct) {
   
     const tr = document.createElement('tr');
 
@@ -21,6 +22,7 @@ export function renderDom(cartItem, corrProduct) {
     tableDataSubTotal.textContent = `$ ${price}`;
     
     tr.append(tableDataItem, tableDataQuant, tableDataPrice, tableDataSubTotal);
+
     return tr;
 }
 

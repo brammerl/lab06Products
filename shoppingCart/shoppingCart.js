@@ -1,22 +1,39 @@
 import bookStock from '../data/books.js';
-import orderOne from '../data/cart.js';
-import { renderDom } from './renderDom.js';
+// import orderOne from '../data/cart.js';
+import { renderCartLine } from './renderDom.js';
 import { findById, calcOrderTotal } from '../common/utils.js';
 
-const table = document.getElementById('body');
 
-for (let i = 0; i < orderOne.length; i++){
-    const order = orderOne[i];
+const button = document.getElementById('orderButton');
+const table = document.getElementById('body');
+const importedCart = JSON.parse(localStorage.getItem('CART'));
+
+
+
+for (let i = 0; i < importedCart.length; i++){
+    const order = importedCart[i];
 
     const product = findById(bookStock, order.id);
 
-    const dom = renderDom(order, product);
+    const dom = renderCartLine(order, product);
 
     table.append(dom);
 }
 
-const orderTotal = calcOrderTotal(orderOne, bookStock);
+const orderTotal = calcOrderTotal(importedCart, bookStock);
 const totalTab = document.getElementById('total');
 
 totalTab.textContent = `$ ${orderTotal}`;
+
+if (!importedCart) {
+    button.disabled = true;
+}
+
+button.addEventListener('click', () => {
+    alert(JSON.stringify(importedCart, true, 2));
+    localStorage.removeItem('CART');
+    window.location = '../productsPage/index.html';
+});
+
+
 
