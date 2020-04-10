@@ -14,7 +14,7 @@ export function renderBook(item) {
     const numberInput = document.createElement('input');
     const button = document.createElement('button');
     const priceText = document.createElement('p');
-    const span = document.createElement('span');
+
 
     image.src = item.img;
     image.align = 'left';
