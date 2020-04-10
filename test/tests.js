@@ -49,5 +49,3 @@ test('testing creating a dom in the product page', function(assert) {
 
     assert.equal(answerOuterHTML, expected);
 });
-
-

@@ -41,4 +41,3 @@ test('testing orderTotal fxn', function(assert) {
 
     assert.equal(answer, expected);
 });
-

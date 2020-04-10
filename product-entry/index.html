@@ -19,31 +19,33 @@
         <a href='../shoppingCart/index.html'>Cart</a>
      </nav>
      <main>
-         <form> 
+         <form id='newProduct'> 
              <h3>Enter New Product Info Here</h3>
              <label>
                  ID
-                 <input type='text'/>
+                 <input type='text' id='id' name='id'/>
              </label>
              <label>
                  Author
-                 <input type='text'/>
+                 <input type='text' id='author' name='author'/>
              </label>
              <label>
                  Summary
                  <br>
-                 <textarea cols='30' rows='10'></textarea>
+                 <textarea cols='30' rows='10' id='summary' name='summary'></textarea>
              </label>
              <label>
                  Price 
-                 <input type='number' step='.01'/>
+                 <input type='number' step='.01' id='price' name='price'/>
              </label>
              <label>
                  Image Source 
-                 <input type='text'/>
+                 <input type='text' id='img' name='img'/>
              </label>   
+             <button>Submit</button>
          </form>
      </main>
+     <script type='module' src='./app.js'></script>
 </body>
 
 </html>

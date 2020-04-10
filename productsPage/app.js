@@ -10,3 +10,7 @@ for (let i = 0; i < bookStock.length; i++) {
 
     uList.append(bookBlock);
 }
+
+const stringedStock = JSON.stringify(bookStock);
+
+localStorage.setItem('STOCK', stringedStock);
