@@ -13,7 +13,7 @@ test('testing add product test', function(assert) {
     addProduct(obj);
     const ans2 = localStorage.getItem('STOCK');
 
-    console.log(ans2);
+    // eslint-disable-next-line no-useless-escape
     const expected = `[{\"id\":\"All About Love\"}]`;
 
     assert.equal(ans2, expected);
