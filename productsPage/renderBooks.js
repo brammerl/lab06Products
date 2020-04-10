@@ -4,16 +4,22 @@ import { findById } from '../common/utils.js';
 
 
 export function renderBook(item) {
+    
+
     const list = document.createElement('li');
     const image = document.createElement('img');
-    const bookTitle = document.createElement('h3');
+    const bookTitle = document.createElement('h2');
+    const author = document.createElement('h3');
     const summaryText = document.createElement('p');
     const numberInput = document.createElement('input');
     const button = document.createElement('button');
     const priceText = document.createElement('p');
+    const span = document.createElement('span');
 
     image.src = item.img;
-    bookTitle.textContent = item.title;
+    image.align = 'left';
+    bookTitle.textContent = item.id;
+    author.textContent = item.author;
     summaryText.textContent = item.summary;
     summaryText.id = 'summary';
     numberInput.type = 'number';
@@ -23,7 +29,9 @@ export function renderBook(item) {
     priceText.textContent = `$ ${item.price}`;
 
 
-    list.append(image, bookTitle, summaryText, numberInput, button, priceText);
+    list.append(image, bookTitle, author, summaryText, numberInput, button, priceText);
+    
+
     
 
     button.addEventListener('click', () => {

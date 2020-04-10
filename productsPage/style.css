@@ -19,14 +19,13 @@ li {
    margin-top: 20px;
 }
 
-li h3 {
+li h2 {
    text-decoration: underline;
 }
 
 li img {
    width: 200px;
    height: 300px;
-   float: left;
    margin: 10px;
    
 }

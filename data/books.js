@@ -1,21 +1,19 @@
 
 const bookStock = [{
     id: 'All About Love',
-    // title: `All About Love`,
     author: `Bell Hooks`,
     summary: `This book taught me so much about love and how we as a society approahces love. It truly revolutionized how I love romantically and platonically.`,
     price: 15.99,
     img: `../photos/allAboutLove.jpg`
 }, {
     id: 'Love and Misadventure',
-    // title: `Love and Misadventure`,
+    
     author: `Lang Leav`,
     summary: `A collection of poems that helped me cope with and understand heartbreak.`,
     price: 16.99,
     img: `../photos/loveAndMisadventure.jpeg`
 }, {
     id: 'Are Prisons Obsolete',
-    // title: `Are Prisons Obsolete?`,
     author: `Angela Y. Davis`,
     summary: `A great introduction to understanding the prison industrial complex. It's short and gets straight to the point. I encourage everyone who wants to deeper understand and fight against systemic racism against black people to read this.`,
     price: 10.99,
@@ -36,3 +34,5 @@ const bookStock = [{
 }];
 
 export default bookStock;
+const defaultStock = JSON.stringify(bookStock);
+localStorage.setItem('STOCK', defaultStock);
